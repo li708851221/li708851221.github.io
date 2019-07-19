@@ -17,8 +17,8 @@ favicon: favicon.ico
 
 repository: li708851221/li708851221.github.io
 github_url: https://github.com/li708851221
-url: http://www.ityouknow.com
-enforce_ssl: ityouknow.com
+url: https://li708851221.github.io
+enforce_ssl: li708851221.github.io
 
 ## Gem
 plugins:
