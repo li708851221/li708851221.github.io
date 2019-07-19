@@ -93,7 +93,7 @@ navs:
 
   -
     href: /
-    label: Home
+    label: 主页
 
   -
     href: /spring-boot.html
@@ -112,7 +112,7 @@ navs:
 
   -
     href: /archives.html
-    label: Archives
+    label: 全部文章
     target: _self
 
   -
