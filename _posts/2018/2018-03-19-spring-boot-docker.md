@@ -4,11 +4,12 @@ title: Spring Boot 2 (四)：使用 Docker 部署 Spring Boot
 category: springboot
 tags: [springboot]
 keywords: Spring Boot,Docker,部署,docker
+
 ---
 
 >**Docker 技术发展为微服务落地提供了更加便利的环境，使用 Docker 部署 Spring Boot 其实非常简单，这篇文章我们就来简单学习下。**
 
-##1.首先创建一个简单的 Spring Boot 项目，然后给项目添加 Docker 支持，最后对项目进行部署。
+## 1.首先创建一个简单的 Spring Boot 项目，然后给项目添加 Docker 支持，最后对项目进行部署。
 
 创建spring boot项目，本次使用 Spring Boot 2.1.5 相关依赖。
 
@@ -100,10 +101,10 @@ Spring Boot 项目添加 Docker 支持
 
 这样 Spring Boot 项目添加 Docker 依赖就完成了。
 
-##2.构建打包环境
+## 2.构建打包环境
 我们需要有一个 Docker 环境来打包 Spring Boot 项目，这里以LINUX Centos 7 为例。
 
-####安装 Docker 环境
+**安装 Docker 环境**
 安装
 
     yum install docker
@@ -132,7 +133,7 @@ Spring Boot 项目添加 Docker 支持
 
 输入docker version 返回版本信息则安装正常。
 
-####安装JDK
+**安装JDK**
     yum -y install java-1.8.0-openjdk*
 配置环境变量 打开 vi /etc/profile 添加一下内容
     
@@ -143,7 +144,7 @@ Spring Boot 项目添加 Docker 支持
     source /etc/profile
 输入java -version 返回版本信息则安装正常。
 
-####安装MAVEN
+**安装MAVEN**
 **下载**：http://mirrors.shu.edu.cn/apache/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
 
 **解压**
@@ -163,7 +164,7 @@ Spring Boot 项目添加 Docker 支持
 
 这样整个构建环境就配置完成了。
 
-##3.使用 Docker 部署 Spring Boot 项目
+## 3.使用 Docker 部署 Spring Boot 项目
 将项目 spring-boot-docker 拷贝服务器中，进入项目路径下进行打包测试。可以在windows中将项目文件压缩成zip文件。放到linux服务器上后执行unzip 名令得到项目文件夹。
 
 **打包**  
