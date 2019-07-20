@@ -55,32 +55,7 @@ paginate_path: 'page:num'
 
 # Navigation. top menu list
 menus:
-
   -
-    href: /zsxq.html
-    label: 星球
-    target: _self
-
-  -
-    href: /gitchat.html
-    label: Chat
-    target: _self
-
-  -
-    href: /geektime.html
-    label: 极客
-    target: _blank
-
-  -
-    href: /life.html
-    label: 故事
-    target: _self
-
-  -
-    href: /arch.html
-    label: 架构
-    target: _self
-
   -
     href: /link.html
     label: 友链
@@ -93,7 +68,7 @@ navs:
 
   -
     href: /
-    label: 主页
+    label: Home
 
   -
     href: /spring-boot.html
@@ -105,19 +80,27 @@ navs:
     target: _self
 
   -
-    
-    href: /wait.html
-    label: 数据结构
+    href: /java.html
+    label: Java
+    target: _self
+
+  -
+    href: /linux.html
+    label: Linux
+    target: _self
+
+  - href: /algorithms.html
+    label: 算法
     target: _self
 
   -
     href: /archives.html
-    label: 全部文章
+    label: Archives
     target: _self
 
   -
     href: /about.html
-    label: 关于
+    label: About
     target: _self
 
 
