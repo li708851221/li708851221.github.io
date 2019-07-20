@@ -63,7 +63,7 @@ menus:
 
   -
     href: /about.html
-    label: About
+    label: 关于
     target: _self
 
 
