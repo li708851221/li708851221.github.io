@@ -104,7 +104,7 @@ Spring Boot 项目添加 Docker 支持
 ## 2.构建打包环境
 我们需要有一个 Docker 环境来打包 Spring Boot 项目，这里以LINUX Centos 7 为例。
 
-**安装 Docker 环境**
+**安装 Docker 环境**  
 安装
 
     yum install docker
