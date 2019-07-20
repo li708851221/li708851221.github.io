@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Linux 常用命令
+title: Linux 常用命令大全
 category: linux
 tags: [linux]
-excerpt: linux命令备忘
+excerpt: linux常用命令备忘
 ---
 
 
