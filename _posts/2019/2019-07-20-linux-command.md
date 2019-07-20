@@ -4,6 +4,8 @@ title: Linux 常用命令
 category: linux
 tags: [linux]
 excerpt: linux命令备忘
+copyrighturl: https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html
+copyrightname: Boblim
 ---
 
 
