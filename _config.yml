@@ -148,9 +148,9 @@ labels:
 classes:
 
   -
-    href: /life.html
-    name: 我的故事
-    describe: 生活就是故事，故事就是生活
+    href: /linux/2019/07/20/linux-command.html.html
+    name: Linux常用命令大全
+    describe: Linux常用命令备忘
 
   -
     href: /arch.html

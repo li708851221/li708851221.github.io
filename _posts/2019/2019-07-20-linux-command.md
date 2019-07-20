@@ -5,7 +5,7 @@ category: linux
 tags: [linux]
 excerpt: linux命令备忘
 copyrighturl: https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html
-copyrightname: Boblim
+copyrightname: https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html
 ---
 
 
@@ -403,14 +403,4 @@ host www.example.com lookup hostname to resolve name to ip address and viceversa
 nslookup www.example.com lookup hostname to resolve name to ip address and viceversa  
 whois www.example.com lookup on Whois database  
 
-## GO TOP INDEX ^ 
-Microsoft Windows networks (SAMBA)  
-nbtscan ip_addr netbios name resolution  
-nmblookup -A ip_addr netbios name resolution  
-smbclient -L ip_addr/hostname show remote shares of a windows host  
-smbget -Rr smb://ip_addr/share like wget can download files from a host windows via smb  
-mount -t smbfs -o username=user,password=pass //WinClient/share /mnt/share mount a windows network share  
-
-
-转载自[https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html](https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html)
 
