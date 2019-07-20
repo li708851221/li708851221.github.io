@@ -2,7 +2,7 @@
 layout: page
 title: Linux 系列文章
 titlebar: linux
-subtitle: <span class="mega-octicon octicon-clippy"></span> 
+subtitle: <span class="mega-octicon octicon-clippy"></span> &nbsp;&nbsp; Linux系列文章
 menu: linux
 css: ['blog-page.css']
 permalink: /linux
