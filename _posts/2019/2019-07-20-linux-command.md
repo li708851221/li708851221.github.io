@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Linux 常用命令大全
+title: Linux 常用命令
 category: linux
 tags: [linux]
-excerpt: linux常用命令备忘
+excerpt: linux命令备忘
 ---
 
 
@@ -410,5 +410,5 @@ smbget -Rr smb://ip_addr/share like wget can download files from a host windows 
 mount -t smbfs -o username=user,password=pass //WinClient/share /mnt/share mount a windows network share  
 
 
-[https://gitee.com/a1234567891/koalas-rpc](https://gitee.com/a1234567891/koalas-rpc)
+转载自[https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html](https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html)
 
