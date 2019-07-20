@@ -3,6 +3,8 @@ layout: post
 title: springcloud(九)：配置中心和消息总线（配置中心终结版）
 category: springcloud
 tags: [springcloud]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 

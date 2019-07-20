@@ -3,6 +3,8 @@ layout: post
 title: springcloud(七)：配置中心svn示例和refresh
 category: springcloud
 tags: [springcloud]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 

@@ -4,6 +4,8 @@ title: PayPal、支付宝诞生的故事 | 概述起源篇
 category: payment
 tags: [payment]
 keywords: 第三分支付，支付宝，快捷支付，第三方支付概述，PayPal
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 你知道第三方支付是如何诞生的吗？

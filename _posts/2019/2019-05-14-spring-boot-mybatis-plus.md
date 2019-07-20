@@ -4,6 +4,8 @@ title: Spring Boot 2 (十一)：如何优雅的使用 MyBatis 之 MyBatis-Plus
 category: springboot
 tags: [springboot]
 keywords: Spring Boot,MyBatis,MyBatis-Plus
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 MyBatis-Plus 是 MyBatis 的第三方使用插件。

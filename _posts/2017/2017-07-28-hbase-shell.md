@@ -3,6 +3,8 @@ layout: post
 title: HBase shell 命令介绍
 category: hbase
 tags: [hbase]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 HBase shell是HBase的一套命令行工具，类似传统数据中的sql概念，可以使用shell命令来查询HBase中数据的详细情况。安装完HBase之后，如果配置了HBase的环境变量，只要在shell中执行```hbase shell```就可以进入命令行界面，HBase的搭建可以参考我的上一篇文章：[hbase分布式集群搭建

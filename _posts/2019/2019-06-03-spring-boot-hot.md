@@ -4,6 +4,8 @@ title: Spring Boot 为什么这么火？
 category: springboot
 tags: [springboot]
 keywords: Spring Boot
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 没错 Spring Boot 越来越火了，而且火的超过了我的预期，作为一名行走一线的 Java 程序员，你可能在各个方面感受到了 Spring Boot 的火。

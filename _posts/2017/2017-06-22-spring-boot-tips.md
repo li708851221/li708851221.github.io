@@ -4,6 +4,8 @@ title:  Spring Boot (十三)： Spring Boot 小技巧
 category: springboot 
 tags: [springboot]
 copyright: java
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 一些 Spring Boot 小技巧、小知识点

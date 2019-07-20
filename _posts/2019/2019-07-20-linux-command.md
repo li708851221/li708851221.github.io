@@ -4,8 +4,8 @@ title: Linux 常用命令大全
 category: linux
 tags: [linux]
 excerpt: linux命令备忘
-copyrighturl: https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html
-copyrightname: https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html
+copyfromurl: https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html
+copyfromname: https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html
 ---
 
 

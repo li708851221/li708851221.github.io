@@ -4,6 +4,8 @@ title:  Spring Boot(九)：定时任务
 category: springboot 
 tags: [springboot]
 copyright: java
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 在我们开发项目过程中，经常需要定时任务来帮助我们来做一些内容， Spring Boot 默认已经帮我们实行了，只需要添加相应的注解就可以实现

@@ -3,6 +3,8 @@ layout: post
 title: Blog With Jekyll
 category: other
 tags: [other]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 ## Create a blog site

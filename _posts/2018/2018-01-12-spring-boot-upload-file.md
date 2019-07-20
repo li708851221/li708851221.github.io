@@ -6,6 +6,8 @@ tags: [springboot]
 excerpt: 使用 Thymeleaf 制作上传页面，Spring Boot 接收文件并保持到本地。
 keywords: 上传文件, Spring Boot
 copyright: java
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 上传文件是互联网中常常应用的场景之一，最典型的情况就是上传头像等，今天就带着带着大家做一个 Spring Boot 上传文件的小案例。

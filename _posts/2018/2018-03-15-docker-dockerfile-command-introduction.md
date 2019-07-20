@@ -4,6 +4,8 @@ title: Docker(三)：Dockerfile 命令详解
 category: docker
 tags: [docker]
 keywords: docker,Dockerfile,命令,指令详解
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 上一篇文章[Docker(二)：Dockerfile 使用介绍](http://www.ityouknow.com/docker/2018/03/12/docker-use-dockerfile.html)介绍了 Dockerfile 的使用，这篇文章我们来继续了解 Dockerfile ,学习 Dockerfile 各种命令的使用。

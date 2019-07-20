@@ -4,6 +4,8 @@ title:  Spring Boot (十五)： Spring Boot + Jpa + Thymeleaf 增删改查示例
 category: springboot 
 tags: [springboot]
 copyright: java
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 这篇文章介绍如何使用 Jpa 和 Thymeleaf 做一个增删改查的示例。

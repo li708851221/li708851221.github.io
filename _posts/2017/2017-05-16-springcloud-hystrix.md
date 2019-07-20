@@ -3,6 +3,8 @@ layout: post
 title: springcloud(四)：熔断器Hystrix
 category: springcloud
 tags: [springcloud]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 说起springcloud熔断让我想起了去年股市中的熔断，多次痛的领悟，随意实施的熔断对整个系统的影响是灾难性的，好了接下来我们还是说正事。

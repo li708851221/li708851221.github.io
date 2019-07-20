@@ -5,6 +5,8 @@ category: springcloud
 tags: [springcloud]
 keywords: springcloud, GateWay，服务网关
 excerpt: Spring Cloud GateWay 熔断、限流、重试使用教程
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 上篇文章介绍了 Gataway 和注册中心的使用，以及 Gataway 中 Filter 的基本使用，这篇文章我们将继续介绍 Filter 的一些常用功能。

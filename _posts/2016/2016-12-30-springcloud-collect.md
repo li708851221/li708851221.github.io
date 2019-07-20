@@ -3,6 +3,8 @@ layout: post
 title: Spring Cloud 学习资料汇总
 category: springcloud
 tags: [springcloud]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 收集 Spring Cloud 相关的学习资料

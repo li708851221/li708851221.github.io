@@ -3,6 +3,8 @@ layout: post
 title: idea使用总结
 category: other
 tags: [other]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 记录idea的一些常用快捷键

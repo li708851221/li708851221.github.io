@@ -3,6 +3,8 @@ layout: post
 title: 如何在微信公众号优雅的展示代码
 category: other
 tags: [other]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 我在2017-04-25日开通了微信公众号，尝试着去分享一些技术文章，不可避免的文章里面有很多的代码，尝试了很多的方法，现在算是找到了一个还不错的解决方案，因此想把这个分享出来。

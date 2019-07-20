@@ -4,6 +4,8 @@ title: Docker(五)：Docker 三剑客之 Docker Machine
 category: docker
 tags: [docker]
 keywords: docker,Docker Machine,使用,介绍
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 上篇文章[Docker(四)：Docker 三剑客之 Docker Compose ](http://www.ityouknow.com/docker/2018/03/22/docker-compose.html)介绍了 Docker Compose，这篇文章我们来了解 Docker Machine 。

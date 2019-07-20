@@ -6,6 +6,8 @@ tags: [springboot]
 excerpt: 分布式文件系统FastDFS和Spring Boot的故事。
 keywords: FastDFS, Spring Boot
 copyright: java
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 上篇文章介绍了[如何使用 Spring Boot 上传文件](http://www.ityouknow.com/springboot/2018/01/12/spring-boot-upload-file.html)，这篇文章我们介绍如何使用 Spring Boot 将文件上传到分布式文件系统 FastDFS 中。

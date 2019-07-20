@@ -5,6 +5,8 @@ category: springboot
 tags: [springboot]
 keywords: Spring Boot,Docker,Compose,云收藏,Mysql
 excerpt: 只需三步即可部署开源项目云收藏，打造专属个人的收藏系统，就是这么简单！
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 云收藏项目已经开源2年多了，作为当初刚开始学习 Spring Boot 的练手项目，使用了很多当时很新的技术，现在看来其实很多新技术是没有必要使用的，但做为学习案例来讲确实是一个绝佳的 Spring Boot 实践。

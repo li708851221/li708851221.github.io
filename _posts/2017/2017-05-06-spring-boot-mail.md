@@ -4,6 +4,8 @@ title:  Spring Boot (十)：邮件服务
 category: springboot 
 tags: [springboot]
 copyright: java
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 Spring Boot 仍然在狂速发展，才几个多月没有关注，现在看[官网](http://projects.spring.io/spring-boot/)已经到 2.1.0.RELEASE 版本了。准备慢慢在写写 Spring Boot 相关的文章，本篇文章使用 Spring Boot 最新版本 2.1.0 进行开发。

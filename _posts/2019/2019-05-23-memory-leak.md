@@ -5,6 +5,8 @@ copyright: java
 category: java
 tags: [java]
 excerpt: Java 不是自动管理内存吗？怎么可能会出现内存泄泄泄泄泄泄漏！
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 ## 01. 怎么回事？

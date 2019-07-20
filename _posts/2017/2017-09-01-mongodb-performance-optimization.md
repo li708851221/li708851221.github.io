@@ -3,6 +3,8 @@ layout: post
 title: mongodb集群性能优化
 category: mongodb
 tags: [mongodb]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 在前面两篇文章，我们介绍了如何去搭建mongodb集群，这篇文章我们将介绍如何去优化mongodb的各项配置，以达到最优的效果。

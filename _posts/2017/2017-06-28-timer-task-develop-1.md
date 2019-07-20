@@ -3,6 +3,8 @@ layout: post
 title: 定时任务发展史(一)
 category: java 
 tags: [java]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 定时任务是互联网行业里最常用的服务之一，本文给大家介绍定时任务在我司的发展历程。

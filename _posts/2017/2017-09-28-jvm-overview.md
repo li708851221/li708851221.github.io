@@ -3,6 +3,8 @@ layout: post
 title: Jvm 系列(八):Jvm 知识点总览
 category: jvm 
 tags: [jvm]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 

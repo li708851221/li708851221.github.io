@@ -3,6 +3,8 @@ layout: post
 title: git 使用总结
 category: other
 tags: [other]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 git 使用总结

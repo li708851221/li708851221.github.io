@@ -5,6 +5,8 @@ category: springboot
 tags: [springboot]
 excerpt: 有哪些新特性值得我们关注
 keywords: Spring Boot,Spring Boot2.0,发布,Spring Boot 2.0新特性
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 就在今天Spring Boot`2.0.0.RELEASE`正式发布，今天早上在发布Spring Boot2.0的时候还出现一个小插曲，将Spring Boot2.0同步到Maven仓库的时候出现了错误，然后Spring Boot官方又赶紧把 GitHub 上发布的 v2.0.0.RELEASE 版本进行了撤回。到了下午将问题修复后，又重新进行了上传，至此Spring Boot2.0正式推出！

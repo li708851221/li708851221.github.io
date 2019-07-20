@@ -3,6 +3,8 @@ layout: post
 title: hbase分布式集群搭建
 category: hbase
 tags: [hbase]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 hbase和hadoop一样也分为单机版、伪分布式版和完全分布式集群版本，这篇文件介绍如何搭建完全分布式集群环境搭建。

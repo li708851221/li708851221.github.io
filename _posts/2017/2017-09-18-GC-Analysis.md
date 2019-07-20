@@ -3,6 +3,8 @@ layout: post
 title: Jvm 系列(五):Java GC 分析
 category: jvm
 tags: [jvm]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 Java GC就是JVM记录仪，书画了JVM各个分区的表演。

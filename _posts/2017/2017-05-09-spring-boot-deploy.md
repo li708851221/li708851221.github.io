@@ -4,6 +4,8 @@ title: Spring Boot(十二)：Spring Boot 如何测试打包部署
 category: springboot 
 tags: [springboot]
 copyright: java
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 有很多网友会时不时的问我， Spring Boot 项目如何测试，如何部署，在生产中有什么好的部署方案吗？这篇文章就来介绍一下 Spring Boot  如何开发、调试、打包到最后的投产上线。

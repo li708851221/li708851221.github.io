@@ -3,6 +3,8 @@ layout: post
 title: Jvm 系列(一):Java 类的加载机制
 category: jvm
 tags: [jvm]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
  
 类加载机制的奥妙。

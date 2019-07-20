@@ -4,6 +4,8 @@ title:  Spring Boot (十四)： Spring Boot 整合 Shiro-登录认证和权限�
 category: springboot 
 tags: [springboot]
 copyright: java
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 这篇文章我们来学习如何使用 Spring Boot 集成 Apache Shiro 。安全应该是互联网公司的一道生命线，几乎任何的公司都会涉及到这方面的需求。在 Java 领域一般有 Spring Security、 Apache Shiro 等安全框架，但是由于 Spring Security 过于庞大和复杂，大多数公司会选择 Apache Shiro 来使用，这篇文章会先介绍一下 Apache Shiro ，在结合 Spring Boot 给出使用案例。

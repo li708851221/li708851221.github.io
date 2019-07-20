@@ -4,6 +4,8 @@ title: Spring Boot(三)：Spring Boot 中 Redis 的使用
 copyright: java
 category: springboot
 tags: [springboot]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 Spring Boot 对常用的数据库支持外，对 Nosql 数据库也进行了封装自动化。

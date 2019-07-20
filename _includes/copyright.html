@@ -6,9 +6,9 @@
    </p>
    <p align="center" style="margin-top: 15px; font-size: 16px;color: #cc0000;">
        {% if page.copyrighturl %}
-       <strong>（本文章转载自 <a href="{{ page.copyrighturl }}">{{ page.copyrightname }}</a>）</strong>
-       {% else if page.copyrighturl %}
-       <strong>（本文章转载自 <a href="https://www.ityouknow.com">纯洁的微笑-ityouknow</a>）</strong>
+       <strong>（本文章转载自 <a href="{{ page.copyfromurl }}">{{ page.copyfromname }}</a>）</strong>
+       {% else %}
+       <strong> <strong>（转载请注明作者和出处 <a href="https://li708851221.github.io">李长伟的博客</a>）</strong></strong>
        {% endif %}
    </p>
 </div>

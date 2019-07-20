@@ -3,6 +3,8 @@ layout: post
 title: Jvm 系列(三):GC 算法 垃圾收集器
 category: jvm
 tags: [jvm]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 这篇文件将给大家介绍GC都有哪几种算法，以及JVM都有那些垃圾回收器，它们的工作原理。

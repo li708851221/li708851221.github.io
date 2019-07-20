@@ -5,6 +5,8 @@ copyright: python
 category: python
 tags: [python]
 keywords: python，python 历史，python 格言，Guido，Python 发展史
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 Python 的神奇发展史

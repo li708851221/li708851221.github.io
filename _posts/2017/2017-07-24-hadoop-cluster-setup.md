@@ -3,6 +3,8 @@ layout: post
 title: hadoop分布式集群搭建
 category: hadoop
 tags: [hadoop]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 终于要开始玩大数据了，之前对haoop生态几乎没有太多的了解，现在赶鸭子上架，需要完全使用它来做数据中心，这是我的haoop第一篇文章，以后估计会写很多大数据相关的文章。另外有大数据实践经验的网友请联系我，有问题请教谢谢！

@@ -4,6 +4,8 @@ title: 第三方支付兼并出海浪潮 | 发展趋势篇
 category: payment
 tags: [payment]
 keywords: 第三分支付，支付宝，牌照，网络支付，PayPal
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 本篇文章给大家介绍第三方支付行业发展趋势。

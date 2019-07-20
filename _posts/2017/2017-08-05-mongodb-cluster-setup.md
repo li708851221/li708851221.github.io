@@ -3,6 +3,8 @@ layout: post
 title: mongodb 3.4 集群搭建：分片+副本集
 category: mongodb
 tags: [mongodb]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 mongodb是最常用的nosql数据库，在数据库排名中已经上升到了前六。这篇文章介绍如何搭建高可用的mongodb（分片+副本）集群。

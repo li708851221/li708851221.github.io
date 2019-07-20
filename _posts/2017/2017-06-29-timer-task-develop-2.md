@@ -3,6 +3,8 @@ layout: post
 title: 定时任务发展史(二)
 category: java 
 tags: [java]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 第一代定时任务系统上线用了大概半年之后，就被我们厌倦了。于是就规划了第二代定时任务系统。

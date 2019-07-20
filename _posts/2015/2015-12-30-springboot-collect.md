@@ -3,6 +3,8 @@ layout: post
 title: Spring Boot 学习资料汇总
 category: springboot
 tags: [springboot]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 收集 Spring Boot 相关的学习资料，[Spring Cloud点这里](http://www.ityouknow.com/springcloud/2016/12/30/springcloud-collect.html)

@@ -3,6 +3,8 @@ layout: post
 title: springcloud(一)：大话Spring Cloud
 category: springcloud
 tags: [springcloud]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 

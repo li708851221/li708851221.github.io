@@ -3,6 +3,8 @@ layout: post
 title: linux定时备份mysql并同步到其它服务器
 category: mysql
 tags: [mysql]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 数据在任何一家公司里面都是最核心的资产，定期备份则是为了保证数据库出现问题的时候能够及时回滚到最近的备份点，将损失缩小到最小

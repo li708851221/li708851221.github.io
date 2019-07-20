@@ -3,6 +3,8 @@ layout: post
 title: jvm 系列(九):如何优化 Java GC 「译」
 category: jvm
 tags: [jvm]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 本文由[CrowHawk](https://crowhawk.github.io/)翻译，地址：[如何优化Java GC「译」](https://crowhawk.github.io/2017/08/21/jvm_4/)，是Java GC调优的经典佳作。

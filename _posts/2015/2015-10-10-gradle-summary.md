@@ -3,6 +3,8 @@ layout: post
 title: gradle-使用总结
 category: other
 tags: [other]
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 spring 项目建议使用Gradle进行构建项目，相比maven来讲Gradle更简洁，而且gradle更时候大型复杂项目的构建。gradle吸收了maven和ant的特点而来，不过目前maven仍然是Java界的主流

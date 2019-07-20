@@ -6,6 +6,8 @@ no-post-nav: true
 tags: [springboot]
 keywords: Spring Boot,Memcached
 excerpt: Spring Boot 和 Memcached 的解决方案
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 ## Memcached 介绍

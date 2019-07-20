@@ -4,6 +4,8 @@ title: 一文读懂 Spring Boot、微服务架构和大数据治理三者之间�
 category: springboot
 tags: [springboot]
 keywords: Spring Boot,微服务架构,大数据,MongoDB
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 

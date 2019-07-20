@@ -4,6 +4,8 @@ title: Spring Boot 2 (七)：Spring Boot 如何解决项目启动时初始化资
 category: springboot
 tags: [springboot]
 keywords: Spring Boot,commandLineRunner
+copyfromurl: http://www.ityouknow.com
+copyfromname: 纯洁的微笑-ityouknow
 ---
 
 在我们实际工作中，总会遇到这样需求，在项目启动的时候需要做一些初始化的操作，比如初始化线程池，提前加载好加密证书等。今天就给大家介绍一个 Spring Boot 神器，专门帮助大家解决项目启动初始化资源操作。
