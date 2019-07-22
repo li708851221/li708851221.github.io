@@ -91,7 +91,7 @@ navs:
     subnav:
 
       -
-      subHref: /java-base.html
+      subHref: /javabase.html
       subLabel: Java基础
 
       -
