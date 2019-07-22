@@ -2,7 +2,7 @@
 layout: page
 title: 数据结构和算法
 titlebar: algorithms
-subtitle: <span class="mega-octicon octicon-clippy"></span> &nbsp;&nbsp; Java数据结构和算法系列文章
+subtitle: <span class="mega-octicon octicon-clippy"></span> &nbsp;&nbsp; <font color="#FFFFFF">Java数据结构和算法系列文章</font>
 menu: algorithms
 css: ['blog-page.css']
 permalink: /algorithms
