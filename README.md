@@ -2,7 +2,7 @@
 
 访问地址：[https://li708851221.github.io](https://li708851221.github.io)
 
-本博客Fork自[纯洁的微笑]（https://github.com/ityouknow/ityouknow.github.io）
+本博客Fork自[纯洁的微笑](https://github.com/ityouknow/ityouknow.github.io)
 
 博客主题使用:[Yummy-Jekyll](https://github.com/DONGChuan/Yummy-Jekyll)
 
