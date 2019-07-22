@@ -140,8 +140,6 @@ for (int i=1;i<100; i++)
 
 如果大家觉得在手机上看着更方便，可以关注：**Java 极客技术**公号，已经输出了一些 JVM 文章，我博客中的 Jvm 系列文章也都会推送到这个公号中。
 
-![](http://www.ityouknow.com/assets/images/java.jpg)
->关注一下又不会怀孕
 
 参考出处：
 
