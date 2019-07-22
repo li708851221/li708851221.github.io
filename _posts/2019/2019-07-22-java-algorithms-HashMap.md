@@ -2,6 +2,7 @@
 layout: post
 title: HashMap的底层原理
 tags: [algorithms]
+category: algorithms
 excerpt: 
 ---
 HashMap是一个用于存储Key-Value键值对的集合，每一个键值对也叫做Entry。这些个键值对（Entry）分散存储在一个数组当中，这个数组就是HashMap的主干。
