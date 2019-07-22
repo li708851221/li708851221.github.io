@@ -91,12 +91,12 @@ navs:
     subnav:
 
       -
-      subHref: /javabase.html
-      subLabel: Java基础
+        subHref: /java-base.html
+        subLabel: Java基础
 
       -
-      subHref: /algorithms.html
-      subLabel: 数据结构和算法
+        subHref: /algorithms.html
+        subLabel: 数据结构和算法
 
   -
     href: /linux.html
