@@ -12,7 +12,7 @@ HashMap数组每一个元素的初始值都是Null。
 
 对于HashMap，我们最常使用的是两个方法：Get 和 Put。
 
-###1.Put方法的原理
+## 1.Put方法的原理
 
 调用Put方法的时候发生了什么呢？
 
@@ -36,7 +36,7 @@ HashMap数组的每一个元素不止是一个Entry对象，也是一个链表�
 
 需要注意的是，新来的Entry节点插入链表时，使用的是“头插法”。至于为什么不插入链表尾部，后面会有解释。
 
-###2.Get方法的原理
+## 2.Get方法的原理
 
 使用Get方法根据Key来查找Value的时候，发生了什么呢？
 
@@ -58,7 +58,7 @@ index =  Hash（“apple”）;
 之所以把Entry6放在头节点，是因为HashMap的发明者认为，后插入的Entry被查找的可能性更大。
 
 
-###Hash函数均匀分布原理
+## Hash函数均匀分布原理
 
 ``` java
 index =  Hash（“apple”）;
@@ -78,7 +78,7 @@ index =  HashCode（Key） &  （Length - 1）
 
 可以说，Hash算法最终得到的index结果，完全取决于Key的Hashcode值的最后几位。
 
-###HashMap的长度
+## HashMap的长度
 
 为何HashMap的长度必须是16或2的幂？
 
