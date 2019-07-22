@@ -89,11 +89,13 @@ navs:
     label: Java
     target: _self
     subnav:
+
       -
       subHref: /java-base.html
       subLabel: Java基础
+
       -
-      subHref: /algorithms:.html
+      subHref: /algorithms.html
       subLabel: 数据结构和算法
 
   -
