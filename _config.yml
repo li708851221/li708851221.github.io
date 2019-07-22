@@ -77,6 +77,7 @@ navs:
   -
     href: /spring-boot.html
     label: Spring Boot
+    target: _self
 
   -
     href: /spring-cloud.html
@@ -87,14 +88,17 @@ navs:
     href: /java.html
     label: Java
     target: _self
+    subnav:
+      -
+      subHref: /java-base.html
+      subLabel: Java基础
+      -
+      subHref: /algorithms:.html
+      subLabel: 数据结构和算法
 
   -
     href: /linux.html
     label: Linux
-    target: _self
-
-  - href: /algorithms.html
-    label: 算法
     target: _self
 
   -
