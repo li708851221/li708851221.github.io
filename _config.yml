@@ -159,9 +159,9 @@ classes:
     describe: Linux常用命令备忘
 
   -
-    href: /arch.html
-    name: 架构师之路
-    describe: 一个架构师的自我修养
+    href: /algorithms.html
+    name: 数据结构和算法
+    describe: 数据结构和算法之美
 
   -
     href: /java.html
