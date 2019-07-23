@@ -8,29 +8,20 @@ copyfromurl: https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html
 copyfromname: https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html
 ---
 
-
-## 系统信息
-arch 显示机器的处理器架构(1)   
-uname -m 显示机器的处理器架构(2)   
-uname -r 显示正在使用的内核版本   
-dmidecode -q 显示硬件系统部件 - (SMBIOS / DMI)   
-hdparm -i /dev/hda 罗列一个磁盘的架构特性   
-hdparm -tT /dev/sda 在磁盘上执行测试性读取操作   
-cat /proc/cpuinfo 显示CPU info的信息   
-cat /proc/interrupts 显示中断   
-cat /proc/meminfo 校验内存使用   
-cat /proc/swaps 显示哪些swap被使用   
-cat /proc/version 显示内核的版本   
-cat /proc/net/dev 显示网络适配器及统计   
-cat /proc/mounts 显示已加载的文件系统   
-lspci -tv 罗列 PCI 设备   
-lsusb -tv 显示 USB 设备   
-date 显示系统日期   
-cal 2007 显示2007年的日历表   
-date 041217002007.00 设置日期和时间 - 月日时分年.秒   
-clock -w 将时间修改保存到 BIOS   
-
-
+## 用户和群组   
+groupadd group_name 创建一个新用户组   
+groupdel group_name 删除一个用户组   
+groupmod -n new_group_name old_group_name 重命名一个用户组   
+useradd -c "Name Surname " -g admin -d /home/user1 -s /bin/bash user1 创建一个属于 "admin" 用户组的用户   
+useradd user1 创建一个新用户   
+userdel -r user1 删除一个用户 ( '-r' 排除主目录)   
+usermod -c "User FTP" -g system -d /ftp/user1 -s /bin/nologin user1 修改用户属性   
+passwd 修改口令   
+passwd user1 修改一个用户的口令 (只允许root执行)   
+chage -E 2005-12-31 user1 设置用户口令的失效期限   
+pwck 检查 '/etc/passwd' 的文件格式和语法修正以及存在的用户   
+grpck 检查 '/etc/passwd' 的文件格式和语法修正以及存在的群组   
+newgrp group_name 登陆进一个新的群组以改变新创建文件的预设群组   
 
 ## 关机 (系统的关机、重启以及登出 ) 
 shutdown -h now 关闭系统(1)   
@@ -42,6 +33,17 @@ shutdown -r now 重启(1)
 reboot 重启(2)   
 logout 注销   
 
+## YUM 软件包升级器 - （Fedora, RedHat及类似系统） 
+yum install package_name 下载并安装一个rpm包   
+yum localinstall package_name.rpm 将安装一个rpm包，使用你自己的软件仓库为你解决所有依赖关系   
+yum update package_name.rpm 更新当前系统中所有安装的rpm包   
+yum update package_name 更新一个rpm包   
+yum remove package_name 删除一个rpm包   
+yum list 列出当前系统中安装的所有包  
+yum search package_name 在rpm仓库中搜寻软件包  
+yum clean packages 清理rpm缓存删除下载的包  
+yum clean headers 删除所有头文件  
+yum clean all 删除所有缓存的包和头文件  
 
 
 ## 文件和目录 
@@ -79,92 +81,6 @@ iconv -l 列出已知的编码
 iconv -f fromEncoding -t toEncoding inputFile > outputFile creates a new from the given input file by assuming it is encoded in fromEncoding and converting it to toEncoding.   
 find . -maxdepth 1 -name *.jpg -print -exec convert "{}" -resize 80x60 "thumbs/{}" \; batch resize files in the current directory and send them to a thumbnails directory (requires convert from Imagemagick)   
 
-
-
-## 文件搜索 
-find / -name file1 从 '/' 开始进入根文件系统搜索文件和目录   
-find / -user user1 搜索属于用户 'user1' 的文件和目录   
-find /home/user1 -name \*.bin 在目录 '/ home/user1' 中搜索带有'.bin' 结尾的文件   
-find /usr/bin -type f -atime +100 搜索在过去100天内未被使用过的执行文件   
-find /usr/bin -type f -mtime -10 搜索在10天内被创建或者修改过的文件   
-find / -name \*.rpm -exec chmod 755 '{}' \; 搜索以 '.rpm' 结尾的文件并定义其权限   
-find / -xdev -name \*.rpm 搜索以 '.rpm' 结尾的文件，忽略光驱、捷盘等可移动设备   
-locate \*.ps 寻找以 '.ps' 结尾的文件 - 先运行 'updatedb' 命令   
-whereis halt 显示一个二进制文件、源码或man的位置   
-which halt 显示一个二进制文件或可执行文件的完整路径   
-
-
-## 挂载一个文件系统 
-mount /dev/hda2 /mnt/hda2 挂载一个叫做hda2的盘 - 确定目录 '/ mnt/hda2' 已经存在   
-umount /dev/hda2 卸载一个叫做hda2的盘 - 先从挂载点 '/ mnt/hda2' 退出   
-fuser -km /mnt/hda2 当设备繁忙时强制卸载   
-umount -n /mnt/hda2 运行卸载操作而不写入 /etc/mtab 文件- 当文件为只读或当磁盘写满时非常有用   
-mount /dev/fd0 /mnt/floppy 挂载一个软盘   
-mount /dev/cdrom /mnt/cdrom 挂载一个cdrom或dvdrom   
-mount /dev/hdc /mnt/cdrecorder 挂载一个cdrw或dvdrom   
-mount /dev/hdb /mnt/cdrecorder 挂载一个cdrw或dvdrom   
-mount -o loop file.iso /mnt/cdrom 挂载一个文件或ISO镜像文件   
-mount -t vfat /dev/hda5 /mnt/hda5 挂载一个Windows FAT32文件系统   
-mount /dev/sda1 /mnt/usbdisk 挂载一个usb 捷盘或闪存设备   
-mount -t smbfs -o username=user,password=pass //WinClient/share /mnt/share 挂载一个windows网络共享   
-
-## 磁盘空间   
-df -h 显示已经挂载的分区列表   
-ls -lSr |more 以尺寸大小排列文件和目录   
-du -sh dir1 估算目录 'dir1' 已经使用的磁盘空间'   
-du -sk * | sort -rn 以容量大小为依据依次显示文件和目录的大小   
-rpm -q -a --qf '%10{SIZE}t%{NAME}n' | sort -k1,1n 以大小为依据依次显示已安装的rpm包所使用的空间 (fedora, redhat类系统)   
-dpkg-query -W -f='${Installed-Size;10}t${Package}n' | sort -k1,1n 以大小为依据显示已安装的deb包所使用的空间 (ubuntu, debian类系统)   
-
-
-## 用户和群组   
-groupadd group_name 创建一个新用户组   
-groupdel group_name 删除一个用户组   
-groupmod -n new_group_name old_group_name 重命名一个用户组   
-useradd -c "Name Surname " -g admin -d /home/user1 -s /bin/bash user1 创建一个属于 "admin" 用户组的用户   
-useradd user1 创建一个新用户   
-userdel -r user1 删除一个用户 ( '-r' 排除主目录)   
-usermod -c "User FTP" -g system -d /ftp/user1 -s /bin/nologin user1 修改用户属性   
-passwd 修改口令   
-passwd user1 修改一个用户的口令 (只允许root执行)   
-chage -E 2005-12-31 user1 设置用户口令的失效期限   
-pwck 检查 '/etc/passwd' 的文件格式和语法修正以及存在的用户   
-grpck 检查 '/etc/passwd' 的文件格式和语法修正以及存在的群组   
-newgrp group_name 登陆进一个新的群组以改变新创建文件的预设群组   
-
-
-
-## 文件的权限 - 使用 "+" 设置权限，使用 "-" 用于取消 
-ls -lh 显示权限   
-ls /tmp | pr -T5 -W$COLUMNS 将终端划分成5栏显示     
-chmod ugo+rwx directory1 设置目录的所有人(u)、群组(g)以及其他人(o)以读（r ）、写(w)和执行(x)的权限     
-chmod go-rwx directory1 删除群组(g)与其他人(o)对目录的读写执行权限     
-chown user1 file1 改变一个文件的所有人属性   
-chown -R user1 directory1 改变一个目录的所有人属性并同时改变改目录下所有文件的属性   
-chgrp group1 file1 改变文件的群组   
-chown user1:group1 file1 改变一个文件的所有人和群组属性   
-find / -perm -u+s 罗列一个系统中所有使用了SUID控制的文件   
-chmod u+s /bin/file1 设置一个二进制文件的 SUID 位 - 运行该文件的用户也被赋予和所有者同样的权限   
-chmod u-s /bin/file1 禁用一个二进制文件的 SUID位   
-chmod g+s /home/public 设置一个目录的SGID 位 - 类似SUID ，不过这是针对目录的   
-chmod g-s /home/public 禁用一个目录的 SGID 位   
-chmod o+t /home/public 设置一个文件的 STIKY 位 - 只允许合法所有人删除文件   
-chmod o-t /home/public 禁用一个目录的 STIKY 位   
-
-
-
-## 文件的特殊属性 - 使用 "+" 设置权限，使用 "-" 用于取消   
-chattr +a file1 只允许以追加方式读写文件   
-chattr +c file1 允许这个文件能被内核自动压缩/解压   
-chattr +d file1 在进行文件系统备份时，dump程序将忽略这个文件   
-chattr +i file1 设置成不可变的文件，不能被删除、修改、重命名或者链接   
-chattr +s file1 允许一个文件被安全地删除   
-chattr +S file1 一旦应用程序对这个文件执行了写操作，使系统立刻把修改的结果写到磁盘   
-chattr +u file1 若文件被删除，系统会允许你在以后恢复这个被删除的文件   
-lsattr 显示特殊的属性   
-
-
-
 ## 打包和压缩文件 
 bunzip2 file1.bz2 解压一个叫做 'file1.bz2'的文件   
 bzip2 file1 压缩一个叫做 'file1' 的文件   
@@ -188,7 +104,46 @@ zip file1.zip file1 创建一个zip格式的压缩包
 zip -r file1.zip file1 file2 dir1 将几个文件和目录同时压缩成一个zip格式的压缩包   
 unzip file1.zip 解压一个zip格式压缩包   
 
+## 文件搜索 
+find / -name file1 从 '/' 开始进入根文件系统搜索文件和目录   
+find / -user user1 搜索属于用户 'user1' 的文件和目录   
+find /home/user1 -name \*.bin 在目录 '/ home/user1' 中搜索带有'.bin' 结尾的文件   
+find /usr/bin -type f -atime +100 搜索在过去100天内未被使用过的执行文件   
+find /usr/bin -type f -mtime -10 搜索在10天内被创建或者修改过的文件   
+find / -name \*.rpm -exec chmod 755 '{}' \; 搜索以 '.rpm' 结尾的文件并定义其权限   
+find / -xdev -name \*.rpm 搜索以 '.rpm' 结尾的文件，忽略光驱、捷盘等可移动设备   
+locate \*.ps 寻找以 '.ps' 结尾的文件 - 先运行 'updatedb' 命令   
+whereis halt 显示一个二进制文件、源码或man的位置   
+which halt 显示一个二进制文件或可执行文件的完整路径   
 
+## 文件的权限  
+使用 "+" 设置权限，使用 "-" 用于取消 
+ls -lh 显示权限   
+ls /tmp | pr -T5 -W$COLUMNS 将终端划分成5栏显示     
+chmod ugo+rwx directory1 设置目录的所有人(u)、群组(g)以及其他人(o)以读（r ）、写(w)和执行(x)的权限     
+chmod go-rwx directory1 删除群组(g)与其他人(o)对目录的读写执行权限     
+chown user1 file1 改变一个文件的所有人属性   
+chown -R user1 directory1 改变一个目录的所有人属性并同时改变改目录下所有文件的属性   
+chgrp group1 file1 改变文件的群组   
+chown user1:group1 file1 改变一个文件的所有人和群组属性   
+find / -perm -u+s 罗列一个系统中所有使用了SUID控制的文件   
+chmod u+s /bin/file1 设置一个二进制文件的 SUID 位 - 运行该文件的用户也被赋予和所有者同样的权限   
+chmod u-s /bin/file1 禁用一个二进制文件的 SUID位   
+chmod g+s /home/public 设置一个目录的SGID 位 - 类似SUID ，不过这是针对目录的   
+chmod g-s /home/public 禁用一个目录的 SGID 位   
+chmod o+t /home/public 设置一个文件的 STIKY 位 - 只允许合法所有人删除文件   
+chmod o-t /home/public 禁用一个目录的 STIKY 位   
+
+## 文件的特殊属性  
+使用 "+" 设置权限，使用 "-" 用于取消   
+chattr +a file1 只允许以追加方式读写文件   
+chattr +c file1 允许这个文件能被内核自动压缩/解压   
+chattr +d file1 在进行文件系统备份时，dump程序将忽略这个文件   
+chattr +i file1 设置成不可变的文件，不能被删除、修改、重命名或者链接   
+chattr +s file1 允许一个文件被安全地删除   
+chattr +S file1 一旦应用程序对这个文件执行了写操作，使系统立刻把修改的结果写到磁盘   
+chattr +u file1 若文件被删除，系统会允许你在以后恢复这个被删除的文件   
+lsattr 显示特殊的属性   
 
 ## RPM 包 - （Fedora, Redhat及类似系统） 
 rpm -ivh package.rpm 安装一个rpm包     
@@ -218,22 +173,6 @@ rpm2cpio package.rpm | cpio --extract --make-directories *bin* 从一个rpm包�
 rpm -ivh /usr/src/redhat/RPMS/`arch`/package.rpm 从一个rpm源码安装一个构建好的包   
 rpmbuild --rebuild package_name.src.rpm 从一个rpm源码构建一个 rpm 包   
 
-
-
-## YUM 软件包升级器 - （Fedora, RedHat及类似系统） 
-yum install package_name 下载并安装一个rpm包   
-yum localinstall package_name.rpm 将安装一个rpm包，使用你自己的软件仓库为你解决所有依赖关系   
-yum update package_name.rpm 更新当前系统中所有安装的rpm包   
-yum update package_name 更新一个rpm包   
-yum remove package_name 删除一个rpm包   
-yum list 列出当前系统中安装的所有包  
-yum search package_name 在rpm仓库中搜寻软件包  
-yum clean packages 清理rpm缓存删除下载的包  
-yum clean headers 删除所有头文件  
-yum clean all 删除所有缓存的包和头文件  
-
-
-
 ## DEB 包 (Debian, Ubuntu 以及类似系统) 
 dpkg -i package.deb 安装/更新一个 deb 包   
 dpkg -r package_name 从系统删除一个 deb 包   
@@ -243,8 +182,6 @@ dpkg -s package_name 获得已经安装在系统中一个特殊包的信息
 dpkg -L package_name 显示系统中已经安装的一个deb包所提供的文件列表   
 dpkg --contents package.deb 显示尚未安装的一个包所提供的文件列表   
 dpkg -S /bin/ping 确认所给的文件由哪个deb包提供   
-
-
 
 ## PT 软件工具 (Debian, Ubuntu 以及类似系统) 
 apt-get install package_name 安装/更新一个 deb 包   
@@ -256,8 +193,6 @@ apt-get check 确认依赖的软件仓库正确
 apt-get clean 从下载的软件包中清理缓存   
 apt-cache search searched-package 返回包含所要搜索字符串的软件包名称   
 
-
-
 ## 查看文件内容 
 cat file1 从第一个字节开始正向查看文件的内容   
 tac file1 从最后一行开始反向查看一个文件的内容  
@@ -266,8 +201,6 @@ less file1 类似于 'more' 命令，但是它允许在文件中和正向操作�
 head -2 file1 查看一个文件的前两行  
 tail -2 file1 查看一个文件的最后两行  
 tail -f /var/log/messages 实时查看被添加到一个文件中的内容  
-
-
 
 ## 文本处理 
 cat file1 file2 ... | command <> file1_in.txt_or_file1_out.txt general syntax for text manipulation using PIPE, STDIN and STDOUT   
@@ -302,12 +235,33 @@ comm -1 file1 file2 比较两个文件的内容只删除 'file1' 所包含的内
 comm -2 file1 file2 比较两个文件的内容只删除 'file2' 所包含的内容  
 comm -3 file1 file2 比较两个文件的内容只删除两个文件共有的部分  
 
-
 ## 字符设置和文件格式转换 
 dos2unix filedos.txt fileunix.txt 将一个文本文件的格式从MSDOS转换成UNIX  
 unix2dos fileunix.txt filedos.txt 将一个文本文件的格式从UNIX转换成MSDOS  
 recode ..HTML < page.txt > page.html 将一个文本文件转换成html  
 recode -l | more 显示所有允许的转换格式  
+
+## 挂载一个文件系统 
+mount /dev/hda2 /mnt/hda2 挂载一个叫做hda2的盘 - 确定目录 '/ mnt/hda2' 已经存在   
+umount /dev/hda2 卸载一个叫做hda2的盘 - 先从挂载点 '/ mnt/hda2' 退出   
+fuser -km /mnt/hda2 当设备繁忙时强制卸载   
+umount -n /mnt/hda2 运行卸载操作而不写入 /etc/mtab 文件- 当文件为只读或当磁盘写满时非常有用   
+mount /dev/fd0 /mnt/floppy 挂载一个软盘   
+mount /dev/cdrom /mnt/cdrom 挂载一个cdrom或dvdrom   
+mount /dev/hdc /mnt/cdrecorder 挂载一个cdrw或dvdrom   
+mount /dev/hdb /mnt/cdrecorder 挂载一个cdrw或dvdrom   
+mount -o loop file.iso /mnt/cdrom 挂载一个文件或ISO镜像文件   
+mount -t vfat /dev/hda5 /mnt/hda5 挂载一个Windows FAT32文件系统   
+mount /dev/sda1 /mnt/usbdisk 挂载一个usb 捷盘或闪存设备   
+mount -t smbfs -o username=user,password=pass //WinClient/share /mnt/share 挂载一个windows网络共享   
+
+## 磁盘空间   
+df -h 显示已经挂载的分区列表   
+ls -lSr |more 以尺寸大小排列文件和目录   
+du -sh dir1 估算目录 'dir1' 已经使用的磁盘空间'   
+du -sk * | sort -rn 以容量大小为依据依次显示文件和目录的大小   
+rpm -q -a --qf '%10{SIZE}t%{NAME}n' | sort -k1,1n 以大小为依据依次显示已安装的rpm包所使用的空间 (fedora, redhat类系统)   
+dpkg-query -W -f='${Installed-Size;10}t${Package}n' | sort -k1,1n 以大小为依据显示已安装的deb包所使用的空间 (ubuntu, debian类系统)   
 
 
 ## 文件系统分析 
@@ -321,8 +275,6 @@ fsck.vfat /dev/hda1 修复/检查hda1磁盘上fat文件系统的完整性
 fsck.msdos /dev/hda1 修复/检查hda1磁盘上dos文件系统的完整性  
 dosfsck /dev/hda1 修复/检查hda1磁盘上dos文件系统的完整性  
 
-
-
 ## 初始化一个文件系统 
 mkfs /dev/hda1 在hda1分区创建一个文件系统  
 mke2fs /dev/hda1 在hda1分区创建一个linux ext2的文件系统  
@@ -331,14 +283,10 @@ mkfs -t vfat 32 -F /dev/hda1 创建一个 FAT32 文件系统
 fdformat -n /dev/fd0 格式化一个软盘  
 mkswap /dev/hda3 创建一个swap文件系统  
 
-
-
 ## SWAP文件系统 
 mkswap /dev/hda3 创建一个swap文件系统  
 swapon /dev/hda3 启用一个新的swap文件系统  
 swapon /dev/hda2 /dev/hdb3 启用两个swap分区  
-
-
 
 ## 备份 
 dump -0aj -f /tmp/home0.bak /home 制作一个 '/home' 目录的完整备份  
@@ -359,8 +307,6 @@ find /var/log -name '*.log' | tar cv --files-from=- | bzip2 > log.tar.bz2 查找
 dd if=/dev/hda of=/dev/fd0 bs=512 count=1 做一个将 MBR (Master Boot Record)内容复制到软盘的动作   
 dd if=/dev/fd0 of=/dev/hda bs=512 count=1 从已经保存到软盘的备份中恢复MBR内容   
 
-
-
 ## 光盘 
 cdrecord -v gracetime=2 dev=/dev/cdrom -eject blank=fast -force 清空一个可复写的光盘内容  
 mkisofs /dev/cdrom > cd.iso 在磁盘上创建一个光盘的iso镜像文件  
@@ -374,6 +320,26 @@ cd-paranoia -- "-3" 从一个CD光盘转录音轨到 wav 文件中（参数-3）
 cdrecord --scanbus 扫描总线以识别scsi通道  
 dd if=/dev/hdc | md5sum 校验一个设备的md5sum编码，例如一张 CD  
 
+## 系统信息
+arch 显示机器的处理器架构(1)   
+uname -m 显示机器的处理器架构(2)   
+uname -r 显示正在使用的内核版本   
+dmidecode -q 显示硬件系统部件 - (SMBIOS / DMI)   
+hdparm -i /dev/hda 罗列一个磁盘的架构特性   
+hdparm -tT /dev/sda 在磁盘上执行测试性读取操作   
+cat /proc/cpuinfo 显示CPU info的信息   
+cat /proc/interrupts 显示中断   
+cat /proc/meminfo 校验内存使用   
+cat /proc/swaps 显示哪些swap被使用   
+cat /proc/version 显示内核的版本   
+cat /proc/net/dev 显示网络适配器及统计   
+cat /proc/mounts 显示已加载的文件系统   
+lspci -tv 罗列 PCI 设备   
+lsusb -tv 显示 USB 设备   
+date 显示系统日期   
+cal 2007 显示2007年的日历表   
+date 041217002007.00 设置日期和时间 - 月日时分年.秒   
+clock -w 将时间修改保存到 BIOS   
 
 ## 网络 - （以太网和WIFI无线） 
 ifconfig eth0 显示一个以太网卡的配置   
