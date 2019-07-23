@@ -98,7 +98,8 @@
         })
         gitalk.render('gitalk-container')
         */
-        const gitalk = new Gitalk({
+
+        var gitalk = new Gitalk({
           clientID: '{{ site.gitalk.clientID }}',
           clientSecret: '{{ site.gitalk.clientSecret }}',
           repo: '{{ site.gitalk.repo }}',
