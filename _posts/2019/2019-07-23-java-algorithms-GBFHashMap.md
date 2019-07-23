@@ -34,11 +34,9 @@ HashMap负载因子，默认值为0.75f。
 
 创建一个新的Entry空数组，长度是原数组的2倍。
 
-
 ###2.ReHash
 
 遍历原Entry数组，把所有的Entry重新Hash到新数组。为什么要重新Hash呢？因为长度扩大以后，Hash的规则也随之改变。
-
 
 让我们回顾一下Hash公式：
 
@@ -88,7 +86,6 @@ void transfer(Entry[] newTable, boolean rehash) {
 ![](https://li708851221.github.io/assets/images/2019/java/HashMap/HashMap13.jpg)
 
 假如此时线程B遍历到Entry3对象，刚执行完红框里的这行代码，线程就被挂起。对于线程B来说：
-
 
 **e = Entry3**  
 **next = Entry2**
@@ -143,17 +140,13 @@ void transfer(Entry[] newTable, boolean rehash) {
 **e = Entry3**
 **next = Entry3.next = null**
 
-
 最后一步，当我们执行下面这一行的时候，见证奇迹的时刻来临了：
 
 ![](https://li708851221.github.io/assets/images/2019/java/HashMap/HashMap23.jpg)
 
 **newTable[i] = Entry2**
-
 **e = Entry3**
-
 **Entry2.next = Entry3**
-
 **Entry3.next = Entry2**
 
 链表出现了环形！
