@@ -202,16 +202,16 @@ comments_provider: gitalk
 disqus:
     username: li708851221
 # https://imsun.net/posts/gitment-introduction/
-gitment:
-    owner: li708851221
-    repo: blog-comments
-    oauth:
-        client_id: 8f5eb7729ed1a53db65c
-        client_secret: 970c224788cda9791799c9d492c7b8faf1e1f92f
+  #gitment:
+  #owner: li708851221
+  #repo: li708851221.github.io
+      #oauth:
+      #client_id: 8f5eb7729ed1a53db65c
+  #client_secret: 970c224788cda9791799c9d492c7b8faf1e1f92f
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: li708851221
-    repo: blog-comments
+    repo: li708851221.github.io
     clientID: 8f5eb7729ed1a53db65c
     clientSecret: 970c224788cda9791799c9d492c7b8faf1e1f92f
 # 在使用其它评论组件时可点击显示 Disqus
