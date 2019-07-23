@@ -20,9 +20,9 @@ copyfromname: https://www.cnblogs.com/fnlingnzb-learner/p/5831284.html
 ## 2、vim的基本操作
 a) 进入vim
 在系统提示符号输入vi及文件名称后，就进入vi全屏幕编辑画面
-```
-# vim filename
-```
+
+\# vim filename
+
 
 vi之后处于命令行模式，您要切换到插入模式才能够输入文字。  
 b) 切换至插入模式（Insert mode）编辑文件  
