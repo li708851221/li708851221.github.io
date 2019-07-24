@@ -29,11 +29,13 @@ public class SpringBootWebApplication {
 示例代码：
 
 ``` java
-        // 页面跳转
-	@RequestMapping("/users")
-	public String pageadddatasource() {
-		return "userlist";
-	}
+// 页面跳转
+@RequestMapping("/users")
+public String pageadddatasource() {
+
+	return "userlist";
+	
+}
 ```
 
 ### @ResponseBody：
@@ -43,17 +45,19 @@ public class SpringBootWebApplication {
 示例代码：
 
 ``` java
-        @RequestMapping(value = "/getdatasource", method = RequestMethod.POST)
-        @ResponseBody
-        public PageInfo dataGrid(int page, int rows, String sort, String order,String inputcode, String classid) {
-        	PageInfo pageInfo = new PageInfo(page, rows, sort, order);
-        	Map<String, Object> condition = new HashMap<String, Object>();
-        	condition.put("inputcode", inputcode);
-        	condition.put("classid", classid);
-        	pageInfo.setCondition(condition);
-        	adddataSetService.findDataGrid(pageInfo);
-        	return pageInfo;
-        }
+@RequestMapping(value = "/getdatasource", method = RequestMethod.POST)
+@ResponseBody
+public PageInfo dataGrid(int page, int rows, String sort, String order,String inputcode, String classid) {
+
+    PageInfo pageInfo = new PageInfo(page, rows, sort, order);
+    Map<String, Object> condition = new HashMap<String, Object>();
+    condition.put("inputcode", inputcode);
+    condition.put("classid", classid);
+    pageInfo.setCondition(condition);
+    adddataSetService.findDataGrid(pageInfo);
+    return pageInfo;
+    
+}
 ```
 
 ### @Controller：
@@ -108,8 +112,8 @@ SpringBoot自动配置（auto-configuration）：尝试根据你添加的jar依�
 示例代码：
 
 ``` java
-	@Autowired
-	AddDataSetService adddataSetService;
+@Autowired
+AddDataSetService adddataSetService;
 ```
 
 ### @Service：
@@ -124,7 +128,7 @@ public class AddDataSetServiceImpl implements AddDataSetService {
 
 	/*省略代码*/
 	
-	}
+}
 ```
 ### @Repository：
 
@@ -141,8 +145,8 @@ public class AddDataSetServiceImpl implements AddDataSetService {
 示例代码：
 
 ``` java
-    @Value("${mail.fromMail.addr}")
-    private String from;
+@Value("${mail.fromMail.addr}")
+private String from;
 ```
 
 ### @Inject：
@@ -161,7 +165,9 @@ public class AddDataSetServiceImpl implements AddDataSetService {
 
 当有多个同一类型的Bean时，可以用@Qualifier(“name”)来指定。与@Autowired配合使用。@Qualifier限定描述符除了能根据名字进行注入，但能进行更细粒度的控制如何选择候选者，具体使用方式如下：
 
-### @Resource(name=”name”,type=”type”)：
+### @Resource
+
+**@Resource(name=”name”,type=”type”)：**
 
 没有括号内内容的话，默认byName。与@Autowired干类似的事。
 
