@@ -104,6 +104,16 @@ zip file1.zip file1 创建一个zip格式的压缩包
 zip -r file1.zip file1 file2 dir1 将几个文件和目录同时压缩成一个zip格式的压缩包   
 unzip file1.zip 解压一个zip格式压缩包   
 
+## Wget下载名令
+wget http://www.linuxsense.org/xxxx/xxx.tar.gz
+Wget常用参数  
+-b：后台下载，Wget默认的是把文件下载到当前目录。  
+-O：将文件下载到指定的目录中。  
+-P：保存文件之前先创建指定名称的目录。  
+-t：尝试连接次数，当Wget无法与服务器建立连接时，尝试连接多少次。  
+-c：断点续传，如果下载中断，那么连接恢复时会从上次断点开始下载。  
+-r：使用递归下载  
+
 ## 文件搜索 
 find / -name file1 从 '/' 开始进入根文件系统搜索文件和目录   
 find / -user user1 搜索属于用户 'user1' 的文件和目录   
