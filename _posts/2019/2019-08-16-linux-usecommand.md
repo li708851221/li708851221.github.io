@@ -4,8 +4,8 @@ title: Java开发必会的Linux命令
 category: linux
 tags: [linux]
 excerpt: Java开发必会的Linux命令
-copyfromurl: https://www.hollischuang.com/archives/800
-copyfromname: https://www.hollischuang.com/archives/800
+copyfromurl: 
+copyfromname: 
 ---
 
 ## 1.查找文件
