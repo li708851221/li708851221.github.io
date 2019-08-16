@@ -14,7 +14,7 @@ find / -name filename.txt 根据名称查找/目录下的filename.txt文件。
 
 find . -name "*.xml" 递归查找所有的xml文件
 
-find . -name "*.xml" |xargs grep "hello world" 递归查找所有文件内容中包含hello world的xml文件
+find . -name "*.xml" \|xargs grep "hello world" 递归查找所有文件内容中包含hello world的xml文件
 
 grep -H 'spring' *.xml 查找所以有的包含spring的xml文件
 
