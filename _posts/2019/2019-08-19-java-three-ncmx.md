@@ -3,9 +3,9 @@ layout: post
 title: JVM内存结构 VS Java内存模型 VS Java对象模型
 category: java
 tags: [linux]
-excerpt: hollischuang
+excerpt: 
 copyfromurl: http://www.hollischuang.com/archives/2509
-copyfromname: 
+copyfromname: Hollischuang Blog
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;Java作为一种面向对象的，跨平台语言，其对象、内存等一直是比较难的知识点。而且很多概念的名称看起来又那么相似，很多人会傻傻分不清楚。比如本文我们要讨论的JVM内存结构、Java内存模型和Java对象模型，这就是三个截然不同的概念，但是很多人容易弄混。
