@@ -15,6 +15,7 @@ copyfromname:
 &nbsp;&nbsp;&nbsp;&nbsp;首先，这三个概念是完全不同的三个概念。本文主要对这三个概念加以区分以及简单介绍。其中每一个知识点都可以单独写一篇文章，本文并不会深入介绍，感兴趣的朋友可以加入我的知识星球和球友们共同学习。
 
 ## JVM内存结构
+
 &nbsp;&nbsp;&nbsp;&nbsp;我们都知道，Java代码是要运行在虚拟机上的，而虚拟机在执行Java程序的过程中会把所管理的内存划分为若干个不同的数据区域，这些区域都有各自的用途。其中有些区域随着虚拟机进程的启动而存在，而有些区域则依赖用户线程的启动和结束而建立和销毁。在《[Java虚拟机规范（Java SE 8）](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.5.4)》中描述了JVM运行时内存区域结构如下：
 
 ![](https://li708851221.github.io/assets/images/2019/java/threencmx/QQ20180624-150918.png)
@@ -36,6 +37,7 @@ copyfromname:
 如上，做个总结，JVM内存结构，由Java虚拟机规范定义。描述的是Java程序执行过程中，由JVM管理的不同数据区域。各个区域有其特定的功能。
 
 ## Java内存模型
+
 &nbsp;&nbsp;&nbsp;&nbsp;Java内存模型看上去和Java内存结构（JVM内存结构）差不多，很多人会误以为两者是一回事儿，这也就导致面试过程中经常答非所为。
 
 &nbsp;&nbsp;&nbsp;&nbsp;在前面的关于JVM的内存结构的图中，我们可以看到，其中Java堆和方法区的区域是多个线程共享的数据区域。也就是说，多个线程可能可以操作保存在堆或者方法区中的同一个数据。这也就是我们常说的“Java的线程间通过共享内存进行通信”。
@@ -49,7 +51,8 @@ copyfromname:
 &nbsp;&nbsp;&nbsp;&nbsp;在Java中，JMM是一个非常重要的概念，正是由于有了JMM，Java的并发编程才能避免很多问题。这里就不对Java内存模型做更加详细的介绍了，想了解更多的朋友可以参考《Java并发编程的艺术》。
 
 ## Java对象模型
-J&nbsp;&nbsp;&nbsp;&nbsp;ava是一种面向对象的语言，而Java对象在JVM中的存储也是有一定的结构的。而这个关于Java对象自身的存储模型称之为Java对象模型。
+
+&nbsp;&nbsp;&nbsp;&nbsp;Java是一种面向对象的语言，而Java对象在JVM中的存储也是有一定的结构的。而这个关于Java对象自身的存储模型称之为Java对象模型。
 
 &nbsp;&nbsp;&nbsp;&nbsp;HotSpot虚拟机中，设计了一个OOP-Klass Model。OOP（Ordinary Object Pointer）指的是普通对象指针，而Klass用来描述对象实例的具体类型。
 
