@@ -48,7 +48,7 @@ copyfromname:
 
 &nbsp;&nbsp;&nbsp;&nbsp;在Java中，JMM是一个非常重要的概念，正是由于有了JMM，Java的并发编程才能避免很多问题。这里就不对Java内存模型做更加详细的介绍了，想了解更多的朋友可以参考《Java并发编程的艺术》。
 
-##Java对象模型
+## Java对象模型
 J&nbsp;&nbsp;&nbsp;&nbsp;ava是一种面向对象的语言，而Java对象在JVM中的存储也是有一定的结构的。而这个关于Java对象自身的存储模型称之为Java对象模型。
 
 &nbsp;&nbsp;&nbsp;&nbsp;HotSpot虚拟机中，设计了一个OOP-Klass Model。OOP（Ordinary Object Pointer）指的是普通对象指针，而Klass用来描述对象实例的具体类型。
