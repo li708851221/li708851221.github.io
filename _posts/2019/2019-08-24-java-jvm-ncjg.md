@@ -14,7 +14,7 @@ copyfromname: Hollischuang Blog
 
 ## 二、JVM内存区域模型
 
-![](https://li708851221.github.io/assets/images/2019/java/jvm/2354447461.png)
+![](https://li708851221.github.io/assets/images/2019/java/jvm/2354447461.jpg)
 
 #### **1.方法区** 
 
@@ -42,7 +42,7 @@ Class文件中除了有类的版本、字段、方法、接口等描述信息外
 
 > 新生代： 程序新创建的对象都是从新生代分配内存，新生代由Eden Space和两块相同大小的Survivor Space(通常又称S0和S1或From和To)构成，可通过-Xmn参数来指定新生代的大小，也可以通过-XX:SurvivorRation来调整Eden Space及Survivor Space的大小。 老年代： 用于存放经过多次新生代GC任然存活的对象，例如缓存对象，新建的对象也有可能直接进入老年代，主要有两种情况：①.大对象，可通过启动参数设置-XX:PretenureSizeThreshold=1024(单位为字节，默认为0)来代表超过多大时就不在新生代分配，而是直接在老年代分配。②.大的数组对象，切数组中无引用外部对象。 老年代所占的内存大小为-Xmx对应的值减去-Xmn对应的值。
 
-![](https://li708851221.github.io/assets/images/2019/java/jvm/2838681554.png)
+![](https://li708851221.github.io/assets/images/2019/java/jvm/2838681554.jpg)
 
 ![](https://li708851221.github.io/assets/images/2019/java/jvm/20190824163551.png)
 
