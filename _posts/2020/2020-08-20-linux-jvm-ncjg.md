@@ -1,67 +1,122 @@
 ---
-layout: post
-title: Java虚拟机的内存组成以及堆内存介绍
-category: java
-tags: [linux]
-excerpt: 
-copyfromurl: http://www.hollischuang.com/archives/80
-copyfromname: Hollischuang Blog
+layout: post  
+title:  Linux Centtos 下安装mysql和postgresql笔记  
+category: linux  
+tags: [linux]  
+excerpt:   
 ---
 
-## 一、java内存组成介绍：堆(Heap)和非堆(Non-heap)内存
-> 按照官方的说法：“Java 虚拟机具有一个堆，堆是运行时数据区域，所有类实例和数组的内存均从此处分配。堆是在 Java 虚拟机启动时创建的。”“在JVM中堆之外的内存称为非堆内存(Non-heap memory)”。可以看出JVM主要管理两种类型的内存：堆和非堆。简单来说堆就是Java代码可及的内存，是留给开发人员使用的；非堆就是JVM留给 自己用的，所以方法区、JVM内部处理或优化所需的内存(如JIT编译后的代码缓存)、每个类结构(如运行时常数池、字段和方法数据)以及方法和构造方法 的代码都在非堆内存中。
+## 一、mysql安装
+执行命令完成安装
+
+    wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+    rpm -ivh mysql-community-release-el7-5.noarch.rpm
+    yum update
+    yum install mysql-server
+
+权限设置：
+
+    chown mysql:mysql -R /var/lib/mysql
+初始化 MySQL：
+
+    mysqld --initialize
+启动 MySQL：
+
+    systemctl start mysqld
+查看 MySQL 运行状态：
+
+    systemctl status mysqld
+
+如果没有意外，mysql已经安装成功。  
+然而是事情并没有那么简单。安装完成后，执行“systemctl start mysqld”命令启动mysql服务发现报错启动不了。
+
+解决方式：查看mysql错误日志
+
+/var/log/mysql/mysqld.log文件。//不同安装情况下日志位置可能不同。
+错误如下
+
+>2020-08-19T05:49:26.559072Z 1 [ERROR] [MY-012271] [InnoDB] The innodb_system data file 'ibdata1' must be writable
+
+ibdata1文件没有写入权限。 解决方式如下。
+ 
+    chmod -R 777 /var/lib/mysql
+
+重新执行**systemctl start mysqld**命令启动mysql服务，服务正常启动。    
+  
+**更改mysql初始密码**
+
+ 通过/var/log/mysql/mysqld.log文件获取root初始密码为 2ZnH*w(nwm>S  
+ 
+ >2020-08-19T05:48:58.056339Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: 2ZnH*w(nwm>S
 
 
-## 二、JVM内存区域模型
+    [root@linux ~]# mysql -uroot -p
+    Enter password:
 
-![](https://li708851221.github.io/assets/images/2019/java/jvm/2354447461.jpg)
+输入初始密码，登录。
 
-#### **1.方法区** 
+    mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'xxxxxxxx';
+    Query OK, 0 rows affected (0.11 sec)
+    
+    mysql> flush privileges;
+    Query OK, 0 rows affected (0.01 sec)
 
-也称”永久代” 、“非堆”， 它用于存储虚拟机加载的类信息、常量、静态变量、是各个线程共享的内存区域。默认最小值为16MB，最大值为64MB，可以通过-XX:PermSize 和 -XX:MaxPermSize 参数限制方法区的大小。
+执行更改密码语句。
+此处参考https://www.cnblogs.com/wuotto/p/9682400.html，不同系统下修改方式不同。
 
-运行时常量池：是方法区的一部分，其中的主要内容来自于JVM对Class的加载。
+然后使用navicat远程连接mysq还是连接不上  
+一.考虑是否开启了防火墙未开启端口。云服务器考虑是不是网络安全组设置未开启相应端口。
+二.开放端口后重新链接报"Host 'xxxx' is not allowed to connect to this MySQL server"  
+解决方法：  
+修改mysql权限表 
+    
+        use mysql;   
+        update user set host='%' where user='root';  
+        flush privileges; 
 
-Class文件中除了有类的版本、字段、方法、接口等描述信息外，还有一项信息是常量池，用于存放编译器生成的各种符号引用，这部分内容将在类加载后放到方法区的运行时常量池中。
+##二、centos8安装postgresql记录  
+###1.安装    
 
-#### **2.虚拟机栈**
+    # Install the repository RPM:  
+    dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm  
 
-描述的是java 方法执行的内存模型：每个方法被执行的时候 都会创建一个“栈帧”用于存储局部变量表(包括参数)、操作栈、方法出口等信息。每个方法被调用到执行完的过程，就对应着一个栈帧在虚拟机栈中从入栈到出栈的过程。声明周期与线程相同，是线程私有的。
+    # Disable the built-in PostgreSQL module:  
+    dnf -qy module disable postgresql  
 
-局部变量表存放了编译器可知的各种基本数据类型(boolean、byte、char、short、int、float、long、double)、对象引用(引用指针，并非对象本身)，其中64位长度的long和double类型的数据会占用2个局部变量的空间，其余数据类型只占1个。局部变量表所需的内存空间在编译期间完成分配，当进入一个方法时，这个方法需要在栈帧中分配多大的局部变量是完全确定的，在运行期间栈帧不会改变局部变量表的大小空间。
+    # Install PostgreSQL:  
+    dnf install -y postgresql11-server  
 
-#### **3.本地方法栈**
+    # Optionally initialize the database and enable automatic start:  
+    /usr/pgsql-11/bin/postgresql-11-setup initdb  
+    systemctl enable postgresql-11  
+    systemctl start postgresql-11  
 
-与虚拟机栈基本类似，区别在于虚拟机栈为虚拟机执行的java方法服务，而本地方法栈则是为Native方法服务。
+###2.修改远程连接限制    
+修改/var/lib/pgsql/11/data/文件夹下    
+**1.postgresql.conf文件**  
 
-#### **4.堆**
+    # - Connection Settings -  
+    listen_addresses = '*'		# what IP address(es) to listen on;
+                        # comma-separated list of addresses;
+                        # defaults to 'localhost'; use '*' for all
+                        # (change requires restart)
 
-也叫做java 堆、GC堆是java虚拟机所管理的内存中最大的一块内存区域，也是被各个线程共享的内存区域，在JVM启动时创建。该内存区域存放了对象实例及数组(所有new的对象)。其大小通过-Xms(最小值)和-Xmx(最大值)参数设置，-Xms为JVM启动时申请的最小内存，默认为操作系统物理内存的1/64但小于1G，-Xmx为JVM可申请的最大内存，默认为物理内存的1/4但小于1G，默认当空余堆内存小于40%时，JVM会增大Heap到-Xmx指定的大小，可通过-XX:MinHeapFreeRation=来指定这个比列；当空余堆内存大于70%时，JVM会减小heap的大小到-Xms指定的大小，可通过XX:MaxHeapFreeRation=来指定这个比列，对于运行系统，为避免在运行时频繁调整Heap的大小，通常-Xms与-Xmx的值设成一样。
+**2.pg_hba.conf文件**   
+添加   
+>host    all             all             0.0.0.0/0               md5  
 
-由于现在收集器都是采用分代收集算法，堆被划分为新生代和老年代。新生代主要存储新创建的对象和尚未进入老年代的对象。老年代存储经过多次新生代GC(Minor GC)任然存活的对象。
 
-> 新生代： 程序新创建的对象都是从新生代分配内存，新生代由Eden Space和两块相同大小的Survivor Space(通常又称S0和S1或From和To)构成，可通过-Xmn参数来指定新生代的大小，也可以通过-XX:SurvivorRation来调整Eden Space及Survivor Space的大小。 老年代： 用于存放经过多次新生代GC任然存活的对象，例如缓存对象，新建的对象也有可能直接进入老年代，主要有两种情况：①.大对象，可通过启动参数设置-XX:PretenureSizeThreshold=1024(单位为字节，默认为0)来代表超过多大时就不在新生代分配，而是直接在老年代分配。②.大的数组对象，切数组中无引用外部对象。 老年代所占的内存大小为-Xmx对应的值减去-Xmn对应的值。
+重新启动postgresql    
 
-![](https://li708851221.github.io/assets/images/2019/java/jvm/2838681554.jpg)
+     systemctl restart postgresql  
 
-![](https://li708851221.github.io/assets/images/2019/java/jvm/20190824163551.png)
+###3.修改默认postgres用户密码  
 
-#### **5.程序计数器**
+步骤一：登录PostgreSQL  
 
-是最小的一块内存区域，它的作用是当前线程所执行的字节码的行号指示器，在虚拟机的模型里，字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、异常处理、线程恢复等基础功能都需要依赖计数器完成。
+    sudo -u postgres psql  
 
-## 三、直接内存
+步骤二：执行改密码脚本  
 
-直接内存并不是虚拟机内存的一部分，也不是Java虚拟机规范中定义的内存区域。jdk1.4中新加入的NIO，引入了通道与缓冲区的IO方式，它可以调用Native方法直接分配堆外内存，这个堆外内存就是本机内存，不会影响到堆内存的大小。
-
-## 四、Java堆内存的10个要点
->Java堆内存是操作系统分配给JVM的内存的一部分。        
-当我们创建对象时，它们存储在Java堆内存中。      
-为了便于垃圾回收，Java堆空间分成三个区域，分别叫作New Generation, Old Generation或叫作Tenured Generation，还有Perm Space。      
-你可以通过用JVM的命令行选项 -Xms, -Xmx, -Xmn来调整Java堆空间的大小。不要忘了在大小后面加上”M”或者”G”来表示单位。举个例子，你可以用 -Xmx256m来设置堆内存最大的大小为256MB。      
-你可以用JConsole或者 Runtime.maxMemory(), Runtime.totalMemory(), Runtime.freeMemory()来查看Java中堆内存的大小。      
-你可以使用命令“jmap”来获得heap dump，用“jhat”来分析heap dump。      
-Java堆空间不同于栈空间，栈空间是用来储存调用栈和局部变量的。      
-Java垃圾回收器是用来将死掉的对象(不再使用的对象)所占用的内存回收回来，再释放到Java堆空间中。      
-当你遇到java.lang.outOfMemoryError时，不要紧张，有时候仅仅增加堆空间就可以了，但如果经常出现的话，就要看看Java程序中是不是存在内存泄露了。      
-请使用Profiler和Heap dump分析工具来查看Java堆空间，可以查看给每个对象分配了多少内存。      
+    postgres=# ALTER USER postgres WITH PASSWORD 'postgresql';  
+成功提示 ALTER ROLE 
