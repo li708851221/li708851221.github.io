@@ -74,7 +74,9 @@ ibdata1文件没有写入权限。 解决方式如下。
         update user set host='%' where user='root';  
         flush privileges; 
 
+
 ##二、centos8安装postgresql记录  
+
 ###1.安装    
 
     # Install the repository RPM:  
@@ -118,5 +120,7 @@ ibdata1文件没有写入权限。 解决方式如下。
 
 步骤二：执行改密码脚本  
 
-    postgres=# ALTER USER postgres WITH PASSWORD 'postgresql';  
+    postgres=# ALTER USER postgres WITH PASSWORD 'postgresql';    
+    
+    
 成功提示 ALTER ROLE 
