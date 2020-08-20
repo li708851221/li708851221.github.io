@@ -65,7 +65,7 @@ ibdata1文件没有写入权限。 解决方式如下。
 此处参考https://www.cnblogs.com/wuotto/p/9682400.html，不同系统下修改方式不同。
 
 然后使用navicat远程连接mysq还是连接不上  
-一.考虑是否开启了防火墙未开启端口。云服务器考虑是不是网络安全组设置未开启相应端口。
+一.考虑是否开启了防火墙未开启端口。云服务器考虑是不是网络安全组设置未开启相应端口。  
 二.开放端口后重新链接报"Host 'xxxx' is not allowed to connect to this MySQL server"  
 解决方法：  
 修改mysql权限表 
