@@ -75,9 +75,9 @@ ibdata1文件没有写入权限。 解决方式如下。
         flush privileges; 
 
 
-##二、centos8安装postgresql记录  
+## 二、centos8安装postgresql记录  
 
-###1.安装    
+### 1.安装    
 
     # Install the repository RPM:  
     dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm  
@@ -93,7 +93,7 @@ ibdata1文件没有写入权限。 解决方式如下。
     systemctl enable postgresql-11  
     systemctl start postgresql-11  
 
-###2.修改远程连接限制    
+### 2.修改远程连接限制    
 修改/var/lib/pgsql/11/data/文件夹下    
 **1.postgresql.conf文件**  
 
@@ -112,7 +112,7 @@ ibdata1文件没有写入权限。 解决方式如下。
 
      systemctl restart postgresql  
 
-###3.修改默认postgres用户密码  
+### 3.修改默认postgres用户密码  
 
 步骤一：登录PostgreSQL  
 

@@ -6,10 +6,10 @@ tags: [linux]
 excerpt:   
 ---
   
-##1、下载合适的 JDK 。
+## 1、下载合适的 JDK 。
 注意：这里需要下载 Linux 版本。这里以jdk-8u201-linux-x64.tar.gz为例。
     
-##2、创建目录
+## 2、创建目录
 
 在/usr/目录下创建java目录，
 
@@ -17,11 +17,11 @@ excerpt:
     cd /usr/java
 把下载的文件 jdk-8u201-linux-x64.tar.gz 放在/usr/java/目录下。
     
-##3. 解压 JDK
+## 3. 解压 JDK
 
     tar -zxvf jdk-8u201-linux-x64.tar.gz
   
-##4. 设置环境变量
+## 4. 设置环境变量
 
 修改 vim /etc/profile
 
@@ -39,7 +39,7 @@ excerpt:
     source /etc/profile
   
    
-##5. 测试
+## 5. 测试
     java -version
 
 
