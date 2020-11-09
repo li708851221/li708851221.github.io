@@ -1,7 +1,7 @@
 ---
 layout: post  
-title:  使用docker安装GitLab  
-category: linux docker     
+title: 使用docker安装GitLab  
+category: docker     
 tags: [linux] [docker] [gitlab]    
 excerpt:   
 ---
