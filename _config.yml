@@ -85,6 +85,11 @@ navs:
     target: _self
 
   -
+    href: /spring-cloud-alibaba.html
+    label: Spring Cloud alibaba
+    target: _self
+
+  -
     href: /java.html
     label: Java
     target: _self
