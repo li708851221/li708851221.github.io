@@ -80,14 +80,15 @@ navs:
     target: _self
 
   -
-    href: /spring-cloud.html
-    label: Spring Cloud
-    target: _self
-
-  -
-    href: /spring-cloud-alibaba.html
     label: Spring Cloud alibaba
     target: _self
+      -
+        subHref: /spring-cloud.html
+        subLabel: SpringCloud
+
+      -
+        subHref: /spring-cloud-alibaba.html
+        subLabel: SpringCloudAlibaba
 
   -
     href: /java.html
@@ -120,16 +121,6 @@ navs:
 labels:
 
   -
-    href: /payment.html
-    label: 支付     
-    target: _self
-
-  -
-    href: /fastdfs.html
-    label: FastDFS
-    target: _blank
-
-  -
     href: /mongodb.html
     label: MongoDB
     target: _blank
@@ -138,10 +129,14 @@ labels:
     href: /docker.html
     label: Docker
     target: _blank
+  -
+    href: /fastdfs.html
+    label: FastDFS
+    target: _blank
 
   -
     href: /open-source.html
-    label: Code  
+    label: GitHub
     target: _blank
 
   -
@@ -153,6 +148,10 @@ labels:
     href: /python.html
     label: Python  
     target: _blank
+
+  - href: /payment.html
+    label: 支付
+    target: _self
 
 
 # selected articles
