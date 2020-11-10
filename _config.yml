@@ -80,7 +80,7 @@ navs:
     target: _self
 
   -
-    label: Spring Cloud alibaba
+    label: Spring Cloud
     target: _self
     subnav:
 
@@ -90,7 +90,7 @@ navs:
 
       -
         subHref: /spring-cloud-alibaba.html
-        subLabel: SpringCloudAlibaba
+        subLabel: Alibaba
 
   -
     href: /java.html
