@@ -3,9 +3,9 @@ layout: page
 title: ETL 数据抽取
 titlebar: etl
 subtitle: <span class="mega-octicon octicon-flame"></span>&nbsp;&nbsp; ETL 系列
-menu: docker
+menu: etl
 css: ['blog-page.css']
-permalink: /docker
+permalink: /etl
 keywords: ETL
 ---
 
