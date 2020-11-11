@@ -131,6 +131,11 @@ labels:
     href: /docker.html
     label: Docker
     target: _blank
+
+  - href: /etl.html
+    label: ETL
+    target: _blank
+
   -
     href: /fastdfs.html
     label: FastDFS
