@@ -205,6 +205,35 @@ docker stop container_name/container_id
 docker restart container_name/container_id
 ```
 
+
+进入容器命令：
+
+``` sh
+docker attach 容器ID
+```
+
+或者
+
+``` sh
+docker exec -it 容器ID /bin/bash 
+```
+
+或者
+
+``` sh
+docker exec -it 容器的name bash
+```
+
+退出容器命令
+
+``` sh
+exit
+```
+
+或者
+
+Ctrl+P+Q
+
 后台启动一个容器后，如果想进入到这个容器，可以使用attach命令：
 
 ``` sh
