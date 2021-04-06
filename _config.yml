@@ -7,10 +7,10 @@
 
 # Site settings
 title:  代码笔记本
-subtitle: 好好学习！天天向上！
+subtitle: 加油吧，打工人！
 name: 代码笔记本
 email: 708851221@qq.com
-description: 本站是李长伟的技术学习分享博客。内容涵盖Linux、Java后端技术、Spring Boot、Spring Cloud、微服务架构、中间件使用等相关的学习知识分享。
+description: 如果你只做自己能力范围内的事情就无法进步。
 keywords: Spring,Spring Boot,Spring Cloud,MongoDB,Jvm,Docker,架构,FastDFS,编程,代码,开源,Developer,IT技术博客,Java,Python,Nginx,Gitlab
 encoding: "utf-8"
 favicon: l_favicon.ico
@@ -80,9 +80,17 @@ navs:
     target: _self
 
   -
-    href: /spring-cloud.html
     label: Spring Cloud
     target: _self
+    subnav:
+
+      -
+        subHref: /spring-cloud.html
+        subLabel: SpringCloud
+
+      -
+        subHref: /spring-cloud-alibaba.html
+        subLabel: Alibaba
 
   -
     href: /java.html
@@ -115,16 +123,6 @@ navs:
 labels:
 
   -
-    href: /payment.html
-    label: 支付     
-    target: _self
-
-  -
-    href: /fastdfs.html
-    label: FastDFS
-    target: _blank
-
-  -
     href: /mongodb.html
     label: MongoDB
     target: _blank
@@ -134,9 +132,18 @@ labels:
     label: Docker
     target: _blank
 
+  - href: /etl.html
+    label: ETL
+    target: _blank
+
+  -
+    href: /fastdfs.html
+    label: FastDFS
+    target: _blank
+
   -
     href: /open-source.html
-    label: Code  
+    label: GitHub
     target: _blank
 
   -
@@ -148,6 +155,10 @@ labels:
     href: /python.html
     label: Python  
     target: _blank
+
+  - href: /payment.html
+    label: 支付
+    target: _self
 
 
 # selected articles
